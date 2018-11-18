@@ -1,0 +1,27 @@
+<html>
+<head>
+    <style>
+        #hid1{
+            color:red;
+            font-style: italic;
+        }
+        i{
+            color: red;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body bgcolor="#3eff3e">
+<marquee behavior="alternate" width=100%><h1>welcome to <i>Product info </i>Project</h1></marquee>
+   <h1 id="hid1"><center>Update product cost here....</center></h1>
+<center>
+    <form action="" method="post">
+        {%csrf_token%}
+        <b>Product id</b>{{form.pid}}<br><br>
+        <b>Product cost</b>{{form.pcost}}<br><br>
+        <input type="submit" value="Submit"/>
+    </form>
+    <h3> <a href="./">click here to go to home page</a> </h3><br>
+</center>
+</body>
+</html>

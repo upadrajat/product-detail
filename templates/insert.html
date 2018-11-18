@@ -1,0 +1,40 @@
+<html>
+<head>
+    <style>
+        #hid1{
+            color:chartreuse;
+            font-style: italic;
+        }
+        i{
+            color:red;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body bgcolor="#3eff3e">
+<MARQUEE BEHAVIOR="alternate" width="100%"><h1>welcome to <i>Product Info </i>Project</h1></MARQUEE>
+  <h1 id="hid1"><center>Please enter your product Detail......</center></h1>
+<center>
+    <form action="" method="post">
+        {%csrf_token%}
+        <fieldset style="width:40%;background: bisque">
+            <body bgcolor="#ee82ee", align="center">
+            <legend align="center" style="color:red;">Product Details:</legend>
+            <table border="0">
+                <b> Product ID:</b>{{form.pid}} <br><br>
+                <b> Product Name:</b>{{form.pname}} <br><br>
+                <b> Product cost:</b>{{form.pcost}} <br><br>
+                <b> Product color:</b>{{form.pcolor}} <br><br>
+                <b> Product mfg:</b>{{form.pmfd}} <br><br>
+                <b> Product exd:</b>{{form.pexfd}} <br><br>
+                <input type="submit" value="submit">
+
+            </table>
+            </body>
+        </fieldset>
+    </form>
+
+<h3> <a href='./'>click here to goto homepage</a></h3><br>
+</center>
+</body>
+</html>
